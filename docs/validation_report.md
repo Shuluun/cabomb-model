@@ -30,8 +30,8 @@ Tested versions: cabomb-model 0.2.0, numpy 2.5.4, scipy 1.18.1, pandas 3.1.0, ma
 file and then install the project. The main README uses supported dependency
 ranges for a simpler setup.
 
-The GitHub Actions workflow is supplied for future repository runs. It has not
-run on GitHub; this execution record is from Windows. The Streamlit version
+The table above records the clean Windows installation. GitHub workflow runs
+are listed in the repository's [Actions tab](https://github.com/Shuluun/cabomb-model/actions). The Streamlit version
 emits a deprecation notice for an existing width option, without affecting the
 tested default and V1.3 views.
 
