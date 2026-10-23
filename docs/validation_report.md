@@ -17,6 +17,10 @@ Checked locally on 2026-10-23, Windows, Python 3.12.14.
 | Installed dependency consistency | `pip check` passed |
 | Reviewed analysis scope | Five active grid dimensions; inactive sequential routes excluded |
 
+The later Ubuntu solver-history comparison and its numerical diagnosis are
+documented in [Numerical portability](numerical_portability.md). Output processing,
+solver convergence and strict historical replay are evaluated separately.
+
 The model and forecast commands ran from a directory outside the public source
 tree using the wheel-installed modules. Parameter resources were loaded from
 that installation. The original project was not used as a runtime fallback.

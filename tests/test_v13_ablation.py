@@ -46,16 +46,16 @@ def test_ablation_common_inputs_metrics_and_provenance(tmp_path):
     summary = (tmp_path / "summary_zh.md").read_text(encoding="utf-8")
     assert "相对变化" in summary and "累计非特异内化" in summary
     assert "实验重复或置信区间" in summary
-    # Historical trajectory comparison checks that postprocessing edits did not alter ODE states.
-    root = Path(__file__).resolve().parents[1]
-    historical = read_csv(root / "tests/fixtures/v13_baseline_timecourse.csv")
+    # Compare postprocessed CSVs with direct integration on the same backend.
+    # Frozen historical replay is reported separately by check_solver_agreement.py.
+    reference = v13_simulate(v13_default_parameters(), design="ocn-ysa", size="100nm").as_rows()
     current = read_csv(tmp_path / "tables/ocn-ysa_timecourse.csv")
-    assert len(historical) == len(current)
-    for key in historical[0]:
+    assert len(reference) == len(current)
+    for key in reference[0]:
         if key == "time_h" or key.startswith("A_"):
-            assert np.allclose([float(r[key]) for r in historical], [float(r[key]) for r in current], rtol=1e-9, atol=1e-11)
+            assert np.allclose([float(r[key]) for r in reference], [float(r[key]) for r in current], rtol=1e-9, atol=1e-11)
         else:
-            assert [r[key] for r in historical] == [r[key] for r in current]
+            assert [str(r[key]) for r in reference] == [r[key] for r in current]
 
 
 def test_v13_report_total_components_and_legacy_retention_exclusion(tmp_path, monkeypatch):

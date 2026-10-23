@@ -1,9 +1,13 @@
 """Report numerical solver and frozen-trajectory agreement without changing tolerances."""
 from pathlib import Path
 from importlib.metadata import version
+from importlib import import_module
+import argparse
 import csv
+import hashlib
 import json
 import platform
+import sys
 
 import numpy as np
 
@@ -11,8 +15,13 @@ from cabomb_model.v13_circulation import (
     v13_default_parameters, v13_simulate,
     v13_max_abs_carrier_residual, v13_max_abs_cargo_residual,
 )
+from cabomb_model.parameters import default_registry_path
 
 ROOT=Path(__file__).resolve().parents[1]
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--strict-history',action='store_true',
+                    help='Also require the original rtol=1e-9/atol=1e-11 frozen-trajectory replay.')
+args=parser.parse_args()
 with (ROOT/'tests/fixtures/v13_baseline_timecourse.csv').open(encoding='utf-8',newline='') as handle:
     rows=list(csv.DictReader(handle))
 params=v13_default_parameters()
@@ -47,4 +56,37 @@ result={
     'mass_residuals':{name:{'carrier':v13_max_abs_carrier_residual(run,params),
                     'cargo':v13_max_abs_cargo_residual(run,params)} for name,run in runs.items()},
 }
+reference_info=json.loads((ROOT/'research/numerical_reference.json').read_text(encoding='utf-8'))
+result['historical_source_identity']={
+    name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==expected
+    for name,expected in reference_info['expected_source_sha256'].items()
+}
+result['historical_fixture_identity']=hashlib.sha256((ROOT/reference_info['fixture']).read_bytes()).hexdigest()==reference_info['fixture_sha256']
+executed_identity={}
+executed_paths={}
+for name,expected in reference_info['expected_source_sha256'].items():
+    if name.startswith('src/cabomb_model/'):
+        module_name='cabomb_model.'+Path(name).stem
+        actual_path=Path(import_module(module_name).__file__)
+    else:
+        actual_path=default_registry_path()
+    executed_paths[name]=str(actual_path)
+    executed_identity[name]=hashlib.sha256(actual_path.read_bytes()).hexdigest()==expected
+result['executed_source_paths']=executed_paths
+result['executed_source_identity']=executed_identity
+dose=params['D0']
+checks={
+    'default_vs_tight_radau':result['default_vs_tight_radau']['maximum_absolute_difference']/dose<=1e-7,
+    'tight_solver_agreement':result['tight_lsoda_vs_radau']['maximum_absolute_difference']/dose<=1e-9,
+    'mass_balance':all(max(row.values())/dose<=1e-7 for row in result['mass_residuals'].values()),
+    'nonnegativity':all(run.y.min()/dose>=-1e-8 for run in runs.values()),
+}
+result['numerical_acceptance_budgets_normalized']={'default_vs_tight_radau':1e-7,'tight_solver_agreement':1e-9}
+result['numerical_checks']=checks
+result['strict_historical_numerical_match']=result['historical_vs_default']['historical_strict_allclose']
+result['strict_historical_replay_pass']=bool(
+    result['strict_historical_numerical_match'] and result['historical_fixture_identity']
+    and all(result['historical_source_identity'].values()) and all(executed_identity.values())
+)
 print('SOLVER_DIAGNOSTICS_JSON='+json.dumps(result,separators=(',',':'),allow_nan=False))
+sys.exit(0 if all(checks.values()) and (not args.strict_history or result['strict_historical_replay_pass']) else 1)

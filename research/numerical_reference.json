@@ -1,0 +1,36 @@
+{
+  "description": "Frozen source and parameter identity for the historical delivery trajectory; later model versions may evolve independently.",
+  "source_manifest": "Historical CABOMB four-design run manifest",
+  "expected_source_sha256": {
+    "src/cabomb_model/v13_circulation.py": "a3f57c11c7769d69970b056301dcfb41833287350e81549036a482a01fd33b1d",
+    "src/cabomb_model/model_modes.py": "c55ec7556501ba1f63c5b16b4d95e8e1224b6aeb6ef17bbe83995369d35b2fde",
+    "src/cabomb_model/v13_states.py": "600f4efb5c4268f10522570d9a3580d9c74f7560f286857d56af7f890e5dc946",
+    "src/cabomb_model/fluxes.py": "1de26756ecfe99fac20fd27cf9ec403ff12fa16f2e0544551e1b65eb4e7c4931",
+    "src/cabomb_model/model.py": "8283351108040c5e7ee5de726bc2d0c6841471e2d7d5df2547eeae506e1cd07f",
+    "src/cabomb_model/scenarios.py": "e284519b1e02fbf9c3248e87c1c732bda4aca583a86316b353609a4b4721e300",
+    "src/cabomb_model/designs.py": "18f9b5474dc9deb188c4538969cd9be6a1ecd07e238ae8f71e257b7871c3831d",
+    "data/processed/parameters_master.csv": "c166ec93454021a499e50a6d7ac42ad01697040cd2dd688961c2dbc013766d6f"
+  },
+  "fixture": "tests/fixtures/v13_baseline_timecourse.csv",
+  "fixture_sha256": "b6c09893ff38f8c66bf7e267e4a00c1bea5fa9f0e0b3f08d8318c9cea4d6dca3",
+  "historical_solver": {
+    "method": "LSODA",
+    "rtol": 1e-08,
+    "atol": 1e-10
+  },
+  "historical_versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0"
+  },
+  "historical_strict_tolerances": {
+    "rtol": 1e-09,
+    "atol": 1e-11
+  },
+  "observed_strict_replay": {
+    "windows_recorded_environment": "PASS",
+    "ubuntu_ci": "FAIL"
+  },
+  "ubuntu_diagnostic_run": "https://github.com/Shuluun/cabomb-model/actions/runs/40041305719"
+}

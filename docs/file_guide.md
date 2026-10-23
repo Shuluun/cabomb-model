@@ -3,6 +3,7 @@
 | File | Role |
 | --- | --- |
 | `scripts/check_solver_agreement.py` | Compare the frozen trajectory, default LSODA and tighter LSODA/Radau solutions. |
+| `tests/test_v13_solver_convergence.py` | Check numerical convergence against independent tight solvers. |
 | `src/cabomb_model/__init__.py` | CABOMB first-version PBPK-inspired ODE model. |
 | `src/cabomb_model/__main__.py` | Module entry point for `python -m cabomb_model`. |
 | `src/cabomb_model/analysis.py` | Analysis workflows for CABOMB V1. |
