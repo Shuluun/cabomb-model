@@ -6,7 +6,7 @@ Checked locally on 2026-10-23, Windows, Python 3.12.14.
 | --- | --- |
 | Wheel build and installation into a fresh environment | Passed |
 | Installed source and resources match this release copy | Passed |
-| Complete test suite | 253 passed, 134.86 seconds |
+| Complete test suite after numerical portability repair | 254 passed, 462.36 seconds |
 | Parameter registry validation | Passed |
 | V1.3 baseline and full report generation | Passed |
 | Synthetic early-only forecast and separate late scoring | Passed |
@@ -16,6 +16,9 @@ Checked locally on 2026-10-23, Windows, Python 3.12.14.
 | Local headless Streamlit service | HTTP 200 health response |
 | Installed dependency consistency | `pip check` passed |
 | Reviewed analysis scope | Five active grid dimensions; inactive sequential routes excluded |
+
+The earlier clean-wheel check passed 253 tests. The latest release-copy recheck
+includes the added independent-solver convergence test.
 
 The later Ubuntu solver-history comparison and its numerical diagnosis are
 documented in [Numerical portability](numerical_portability.md). Output processing,
