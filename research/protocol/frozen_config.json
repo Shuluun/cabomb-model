@@ -1,0 +1,238 @@
+{
+  "version": "1.0",
+  "study_type": "method development and retrospective comparison; all late curves previously exposed",
+  "seed": 20261021,
+  "time_scale": "x=t_h/T_early_end_h; full-early T held fixed in rolling folds",
+  "fitted_methods": [
+    "exp100",
+    "expA",
+    "weibull100",
+    "capped_linear",
+    "weibullA",
+    "higuchi_cap",
+    "kp_cap",
+    "hc_cap"
+  ],
+  "naive_methods": [
+    "hold_last",
+    "last3OLS_slope_anchored_last"
+  ],
+  "old_methods": [
+    "exp100",
+    "expA",
+    "weibull100",
+    "capped_linear"
+  ],
+  "parameter_order": {
+    "exp100": [
+      "k_x"
+    ],
+    "expA": [
+      "k_x",
+      "A_percent"
+    ],
+    "weibull100": [
+      "tau_x",
+      "beta"
+    ],
+    "capped_linear": [
+      "s_pp_x"
+    ],
+    "weibullA": [
+      "tau_x",
+      "beta",
+      "A_percent"
+    ],
+    "higuchi_cap": [
+      "kH_pp_xneg05"
+    ],
+    "kp_cap": [
+      "kKP_pp_xnegn",
+      "n"
+    ],
+    "hc_cap": [
+      "k_x"
+    ]
+  },
+  "numerical_unresolved": "no successful finite fit, or any unsuccessful start RMSE is more than 1e-6 pp lower than best successful start; all starts retained",
+  "external_old4_prediction_parity_tolerance_pp": 1e-06,
+  "bounds": {
+    "k_x": [
+      1e-08,
+      1000
+    ],
+    "A_percent": [
+      0,
+      100
+    ],
+    "tau_x": [
+      0.0001,
+      10000
+    ],
+    "beta": [
+      0.1,
+      5
+    ],
+    "s_pp_x": [
+      0,
+      10000
+    ],
+    "kH_pp_xneg05": [
+      0,
+      10000
+    ],
+    "kKP_pp_xnegn": [
+      0,
+      10000
+    ],
+    "n": [
+      0.1,
+      5
+    ]
+  },
+  "transforms": {
+    "k_x": "log",
+    "A_percent": "linear",
+    "tau_x": "log",
+    "beta": "linear",
+    "s_pp_x": "log1p",
+    "kH_pp_xneg05": "log1p",
+    "kKP_pp_xnegn": "log1p",
+    "n": "linear"
+  },
+  "optimization": {
+    "objective": "unweighted SSE on positive early times, percentage-point scale",
+    "starts": 33,
+    "initialization": "midpoint in normalized transformed bounds plus 32 uniform draws",
+    "seed_rule": "(seed + int(first 8 SHA256 hex of curve_id+family+fold_suffix,16)) mod 2**32; full-fit fold_suffix empty matches external pipeline",
+    "algorithm": "scipy.optimize.least_squares trf",
+    "max_nfev": 20000,
+    "ftol": 1e-11,
+    "xtol": 1e-11,
+    "gtol": 1e-11,
+    "tie_rmse_pp": 1e-08,
+    "bound_normalized_distance": 1e-05
+  },
+  "rolling": {
+    "min_positive_prefix": 4,
+    "prediction": "one next positive early point",
+    "minimum_folds": 2,
+    "score": "sqrt(mean of squared errors over the same complete list of rolling target times))",
+    "old_candidates": "old_methods",
+    "expanded_candidates": "fitted_methods followed by naive_methods",
+    "candidate_failure": "any missing/nonfinite or numerically unresolved fold excludes candidate from selector; retain all failed diagnostics",
+    "fallback": "old4SSE when fewer than two folds or no CV-eligible full-fit-success candidate; record fallback, never count as successful rolling selection",
+    "final_full_fit_failure": "choose next CV-ranked eligible candidate with successful full early fit; record skipped ranks",
+    "tie_break": "listed candidate order within 1e-8 pp of minimum score"
+  },
+  "data": {
+    "calcium_study_id": "CaCO3_2024",
+    "calcium_train_hours": [
+      1,
+      2,
+      4,
+      6,
+      8,
+      12
+    ],
+    "calcium_late_hours": [
+      24,
+      36,
+      48,
+      72,
+      96
+    ],
+    "external_split": "unchanged early and unsealed_late CSV from release_external_validation_20261021",
+    "structural_zero": "retain and plot; exclude from objective and n",
+    "total_studies": 4,
+    "total_curves": 14,
+    "calcium_denominator": "author-reported calcium-release percentage; experimental denominator and sampling details unresolved",
+    "kp_scope": "all-early empirical capped power-law stress benchmark, not a validated application of early-release mechanism law; mark extrapolation beyond conventional early fraction domain"
+  },
+  "evaluation": {
+    "primary": "per-study mean late RMSE, then equal mean across four studies; compare each fixed selector and single method against same-pipeline old4SSE",
+    "late_failure": "late RMSE strictly greater than 10 pp",
+    "also_report": [
+      "all per-curve late RMSE",
+      "per-study results",
+      "terminal signed and absolute errors",
+      "worst per-curve RMSE degradation vs old4SSE",
+      "failure counts",
+      "all unscorable and failed methods",
+      "rolling fallback counts and candidate eligibility"
+    ],
+    "success_description": "descriptive improvement only if study-equal mean late RMSE is smaller; disclose failures, worst worsening and every study regardless; no confirmatory inference or reliable-method claim",
+    "prohibited": [
+      "late-driven model or parameter selection",
+      "changing windows/bounds after outcomes",
+      "pooling calcium and cargo as biological equivalence",
+      "claiming independent external validation",
+      "tuning old R1",
+      "selectively presenting best late method"
+    ]
+  },
+  "bridge": {
+    "model_version": "V1.3 source, explicit circulation",
+    "size": "200nm",
+    "designs": [
+      "unmodified",
+      "ocn",
+      "ysa",
+      "ocn-ysa"
+    ],
+    "scenario": "default parameters; medium EPR and MPS; default intracellular pH",
+    "modes": {
+      "mps_model": "saturable_v1_2",
+      "targeting_model": "sequential_v1_2",
+      "circulation_model": "explicit_v1_3"
+    },
+    "horizon_h": 72,
+    "kernel_family": "F(a)=1-exp(-(a/tau)^beta), a is age after internalization",
+    "beta_scenarios": [
+      0.5,
+      1,
+      2
+    ],
+    "mean_wait_h": 4,
+    "tau_rule": "4/Gamma(1+1/beta)",
+    "platform_fraction": 1,
+    "input": "J_internalization + J_nonspecific_internalization from original unchanged V1.3 dynamics",
+    "ledger": "Q(t)=integral J(s)F(t-s)ds; P(t)=cumulative_input-Q(t); Q+P=cumulative_input",
+    "units": "normalized internalized-carrier-equivalent response, not measured cargo or free calcium",
+    "mapping": "assumed response per unit internalized carrier, no fitted calcium parameter transfer and no Y_cargo update",
+    "output_hours": [
+      4,
+      12,
+      24,
+      48,
+      72
+    ],
+    "quadrature_steps_h": [
+      0.05,
+      0.025,
+      0.0125
+    ],
+    "convergence_tolerance": 0.0001,
+    "mass_tolerance": 1e-10,
+    "input_solver": {
+      "method": "LSODA",
+      "rtol": 1e-09,
+      "atol": 1e-11,
+      "dense_output": true
+    },
+    "interpretation": "structural sensitivity of a fixed model-generated input to assumed waiting-time shape; no intervention or formulation optimization",
+    "first_order_parity_tolerance": 0.0001,
+    "input_integral_parity_tolerance": 0.0001,
+    "negative_flux_clip": "clip [-1e-10,0) only; preserve positive values; record count and minimum; fail below -1e-10",
+    "input_integral_reference": "extra cumulative-J state integrated alongside original unchanged RHS",
+    "intracellular_pH": 5.5,
+    "calcium_observed_acidic_pH": 5.0
+  },
+  "prohibitions": [
+    "No overwrite outside this study folder",
+    "No installation",
+    "No upload",
+    "No commit",
+    "No real fitting until independent scope PASS"
+  ]
+}

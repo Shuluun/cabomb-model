@@ -1,0 +1,85 @@
+{
+  "C02": {
+    "doi": "10.1038/s41467-026-72589-0",
+    "article_url": "https://doi.org/10.1038/s41467-026-72589-0",
+    "license": "article CC BY-NC-ND 4.0; author Source Data publicly attached; no separate workbook license located; local research extraction only, no redistribution permission inferred",
+    "title": "Polyketal-conjugated tafluprost microparticles enable long-acting glaucoma therapy",
+    "authors": [
+      "Zhong, Haiping",
+      "Wei, Tuo",
+      "Zhou, Xueyan",
+      "Yu, Na",
+      "Nakagawa, Yoshiyuki",
+      "Santamaria, Claudia",
+      "Gordon, Akiva",
+      "Wang, Weiping",
+      "Mu, Jingqing",
+      "Zhan, Changyou",
+      "Wang, Hanzhang",
+      "Guo, Shuang-Zhuang",
+      "Barhoumi, Aoune",
+      "Yuan, Xiaoyong",
+      "Kohane, Daniel S.",
+      "Guo, Shutao"
+    ]
+  },
+  "C09": {
+    "doi": "10.1038/s41467-023-36330-5",
+    "article_url": "https://doi.org/10.1038/s41467-023-36330-5",
+    "license": "article CC BY 4.0; author Source Data attached; local snapshots retained with attribution",
+    "title": "Ultra-long-acting in-situ forming implants with cabotegravir protect female macaques against rectal SHIV infection",
+    "authors": [
+      "Young, Isabella C.",
+      "Massud, Ivana",
+      "Cottrell, Mackenzie L.",
+      "Shrivastava, Roopali",
+      "Maturavongsadit, Panita",
+      "Prasher, Alka",
+      "Wong-Sam, Andres",
+      "Dinh, Chuong",
+      "Edwards, Tiancheng",
+      "Mrotz, Victoria",
+      "Mitchell, James",
+      "Seixas, Josilene Nascimento",
+      "Pallerla, Aryani",
+      "Thorson, Allison",
+      "Schauer, Amanda",
+      "Sykes, Craig",
+      "De la Cruz, Gabriela",
+      "Montgomery, Stephanie A.",
+      "Kashuba, Angela D. M.",
+      "Heneine, Walid",
+      "Dobard, Charles W.",
+      "Kovarova, Martina",
+      "Garcia, J. Victor",
+      "Garcίa-Lerma, J. Gerardo",
+      "Benhabbour, S. Rahima"
+    ]
+  },
+  "C16": {
+    "doi": "10.1038/s41467-022-32043-3",
+    "article_url": "https://doi.org/10.1038/s41467-022-32043-3",
+    "license": "article CC BY 4.0; author Source Data attached; local attribution retained",
+    "title": "A long-acting formulation of rifabutin is effective for prevention and treatment of Mycobacterium tuberculosis",
+    "authors": [
+      "Kim, Manse",
+      "Johnson, Claire E.",
+      "Schmalstig, Alan A.",
+      "Annis, Ayano",
+      "Wessel, Sarah E.",
+      "Van Horn, Brian",
+      "Schauer, Amanda",
+      "Exner, Agata A.",
+      "Stout, Jason E.",
+      "Wahl, Angela",
+      "Braunstein, Miriam",
+      "Victor Garcia, J.",
+      "Kovarova, Martina"
+    ]
+  },
+  "CaCO3_2024": {
+    "doi": "10.1038/s41467-024-54402-y",
+    "title": "Calcium nanoparticles target and activate T cells to enhance anti-tumor function",
+    "license": "Article CC BY-NC-ND 4.0. Separate source-data permission not established. Not bundled."
+  }
+}

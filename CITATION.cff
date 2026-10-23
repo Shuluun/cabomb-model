@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software when using its model or analysis code, and cite the original publications for their data."
+type: software
+title: "CABOMB: carrier delivery and release modeling"
+authors:
+  - family-names: "高"
+    given-names: "书伦"
+version: "0.2.0"
+repository-code: "https://github.com/Shuluun/cabomb-model"
+license: MIT
+abstract: "Amount-based carrier-delivery modeling, early-release forecasting and age-since-internalization response analysis, developed for the BNU-China 2026 iGEM CABOMB project, with subsequent personal research extensions."

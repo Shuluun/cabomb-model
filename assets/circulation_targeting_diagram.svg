@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="640" viewBox="0 0 1160 640">
+<rect width="100%" height="100%" fill="white" />
+<text x="580" y="28" text-anchor="middle" font-size="20" font-family="Arial">CABOMB V1.3 explicit circulation and targeting</text>
+<rect x="40" y="280" width="120" height="48" fill="#fde68a" stroke="#334155" stroke-width="1.5" />
+<text x="100" y="304" text-anchor="middle" font-size="12" font-family="Arial">IV bolus</text>
+<rect x="190" y="268" width="150" height="72" fill="#dbeafe" stroke="#334155" stroke-width="1.5" />
+<text x="265" y="304" text-anchor="middle" font-size="12" font-family="Arial">Central venous</text>
+<rect x="380" y="268" width="140" height="72" fill="#dbeafe" stroke="#334155" stroke-width="1.5" />
+<text x="450" y="304" text-anchor="middle" font-size="12" font-family="Arial">Right heart</text>
+<rect x="560" y="150" width="150" height="72" fill="#bbf7d0" stroke="#334155" stroke-width="1.5" />
+<text x="635" y="186" text-anchor="middle" font-size="12" font-family="Arial">Lung vascular</text>
+<rect x="560" y="300" width="140" height="72" fill="#dbeafe" stroke="#334155" stroke-width="1.5" />
+<text x="630" y="336" text-anchor="middle" font-size="12" font-family="Arial">Left heart</text>
+<rect x="740" y="268" width="160" height="72" fill="#dbeafe" stroke="#334155" stroke-width="1.5" />
+<text x="820" y="304" text-anchor="middle" font-size="12" font-family="Arial">Systemic arterial</text>
+<rect x="950" y="90" width="150" height="60" fill="#fef9c3" stroke="#334155" stroke-width="1.5" />
+<text x="1025" y="120" text-anchor="middle" font-size="12" font-family="Arial">Liver vascular</text>
+<rect x="950" y="190" width="150" height="60" fill="#fef9c3" stroke="#334155" stroke-width="1.5" />
+<text x="1025" y="220" text-anchor="middle" font-size="12" font-family="Arial">Spleen vascular</text>
+<rect x="950" y="290" width="170" height="60" fill="#fecaca" stroke="#334155" stroke-width="1.5" />
+<text x="1035" y="320" text-anchor="middle" font-size="12" font-family="Arial">Tumor-feeding vessel</text>
+<rect x="950" y="390" width="150" height="60" fill="#fef9c3" stroke="#334155" stroke-width="1.5" />
+<text x="1025" y="420" text-anchor="middle" font-size="12" font-family="Arial">Rest vascular</text>
+<rect x="950" y="470" width="190" height="66" fill="#fee2e2" stroke="#334155" stroke-width="1.5" />
+<text x="1045" y="496" text-anchor="middle" font-size="12" font-family="Arial">Tumor interstitium</text>
+<text x="1045" y="510" text-anchor="middle" font-size="12" font-family="Arial">(free carrier)</text>
+<rect x="760" y="470" width="130" height="60" fill="#fbcfe8" stroke="#334155" stroke-width="1.5" />
+<text x="825" y="500" text-anchor="middle" font-size="12" font-family="Arial">OCN-bound</text>
+<rect x="540" y="470" width="160" height="60" fill="#e9d5ff" stroke="#334155" stroke-width="1.5" />
+<text x="620" y="500" text-anchor="middle" font-size="12" font-family="Arial">YSA-EphA2-bound</text>
+<rect x="330" y="470" width="140" height="60" fill="#ddd6fe" stroke="#334155" stroke-width="1.5" />
+<text x="400" y="500" text-anchor="middle" font-size="12" font-family="Arial">Internalized</text>
+<rect x="160" y="470" width="130" height="60" fill="#c7d2fe" stroke="#334155" stroke-width="1.5" />
+<text x="225" y="500" text-anchor="middle" font-size="12" font-family="Arial">Cargo release</text>
+<rect x="560" y="40" width="160" height="56" fill="#f1f5f9" stroke="#334155" stroke-width="1.5" />
+<text x="640" y="61" text-anchor="middle" font-size="12" font-family="Arial">Lung retention</text>
+<text x="640" y="75" text-anchor="middle" font-size="12" font-family="Arial">(terminal)</text>
+<rect x="330" y="60" width="190" height="56" fill="#f1f5f9" stroke="#334155" stroke-width="1.5" />
+<text x="425" y="81" text-anchor="middle" font-size="12" font-family="Arial">Clearance / degradation</text>
+<text x="425" y="95" text-anchor="middle" font-size="12" font-family="Arial">(terminal)</text>
+<line x1="100" y1="304" x2="190" y2="304" stroke="#334155" stroke-width="1.5" />
+<text x="145" y="300" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="340" y1="304" x2="380" y2="304" stroke="#334155" stroke-width="1.5" />
+<text x="360" y="300" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="450" y1="280" x2="560" y2="200" stroke="#334155" stroke-width="1.5" />
+<text x="505" y="236" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="560" y1="250" x2="560" y2="300" stroke="#334155" stroke-width="1.5" />
+<text x="560" y="271" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="700" y1="336" x2="740" y2="318" stroke="#334155" stroke-width="1.5" />
+<text x="720" y="323" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="820" y1="320" x2="950" y2="300" stroke="#334155" stroke-width="1.5" />
+<text x="885" y="306" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="820" y1="300" x2="950" y2="130" stroke="#334155" stroke-width="1.5" />
+<text x="885" y="211" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="820" y1="280" x2="950" y2="220" stroke="#334155" stroke-width="1.5" />
+<text x="885" y="246" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="820" y1="340" x2="950" y2="420" stroke="#334155" stroke-width="1.5" />
+<text x="885" y="376" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="950" y1="360" x2="950" y2="470" stroke="#334155" stroke-width="1.5" />
+<text x="950" y="411" text-anchor="middle" font-size="9" font-family="Arial">extravasation
+(EPR/permeability)</text>
+<line x1="950" y1="536" x2="890" y2="500" stroke="#334155" stroke-width="1.5" />
+<text x="920" y="514" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="890" y1="500" x2="760" y2="500" stroke="#334155" stroke-width="1.5" />
+<text x="825" y="496" text-anchor="middle" font-size="9" font-family="Arial">OCN on</text>
+<line x1="630" y1="500" x2="540" y2="500" stroke="#334155" stroke-width="1.5" />
+<text x="585" y="496" text-anchor="middle" font-size="9" font-family="Arial">OCN→YSA</text>
+<line x1="380" y1="500" x2="330" y2="500" stroke="#334155" stroke-width="1.5" />
+<text x="355" y="496" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="260" y1="500" x2="160" y2="500" stroke="#334155" stroke-width="1.5" />
+<text x="210" y="496" text-anchor="middle" font-size="9" font-family="Arial">→</text>
+<line x1="560" y1="150" x2="560" y2="96" stroke="#334155" stroke-width="1.5" />
+<text x="560" y="119" text-anchor="middle" font-size="9" font-family="Arial">lung retention</text>
+<line x1="820" y1="300" x2="520" y2="90" stroke="#334155" stroke-width="1.5" />
+<text x="670" y="191" text-anchor="middle" font-size="9" font-family="Arial">venous return</text>
+<line x1="1045" y1="455" x2="640" y2="455" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6,4" />
+<text x="845" y="448" text-anchor="middle" font-size="9" font-family="Arial" fill="#7c3aed">parallel_dual_access_v1_3 only: direct free-to-YSA (alpha_ysa_direct_access)</text>
+<text x="580" y="630" text-anchor="middle" font-size="11" font-family="Arial">Schematic only; OCN/YSA act post-extravasation and never change cardiac output, pulmonary transit, or initial tumor supply.</text>
+</svg>

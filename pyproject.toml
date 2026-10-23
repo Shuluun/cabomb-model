@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cabomb-model"
+version = "0.2.0"
+description = "Modeling for BNU-China 2026 iGEM CABOMB, with personal release-analysis extensions"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "高书伦"}]
+license = {file = "LICENSE"}
+dependencies = ["numpy>=2.0", "scipy>=1.13", "pandas>=2.0", "matplotlib>=3.7", "openpyxl>=3.1"]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.30"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+cabomb-model = "cabomb_model.cli:main"
+cabomb-release = "cabomb_release.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cabomb_model = ["resources/*.csv"]
+cabomb_release = ["resources/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
