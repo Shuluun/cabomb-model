@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/previous_work/delivery_process_overview.png",
+    "title": "Carrier-delivery process overview",
+    "context": "CABOMB Wiki-oriented model overview",
+    "source_file": "outputs/wiki_delivery_current/20261006_final/figures/00_process_overview.png",
+    "sha256": "f34565ef9b0770fe67fd6141d3bfa1a9f388392c4b018700bb317e2ef3a0dfce",
+    "attribution": "Model-generated CABOMB project figure by 高书伦; team context retained."
+  },
+  {
+    "file": "assets/previous_work/four_design_timecourses.png",
+    "title": "Four-design time-course comparison",
+    "context": "V1.3, 100 nm, sequential targeting",
+    "source_file": "outputs/review_round1/ablation/figures/four_design_timecourses.png",
+    "sha256": "e56f9067c4aa354afb14a832271bddbe2b963709601f2ea402e7433b41f1133d",
+    "attribution": "Model-generated CABOMB project figure by 高书伦; team context retained."
+  },
+  {
+    "file": "assets/previous_work/design_metrics_100_200nm.png",
+    "title": "Design metrics at 100 and 200 nm",
+    "context": "Earlier CABOMB design-comparison presentation",
+    "source_file": "outputs/wiki_delivery_current/20261006_final/figures/02_design_metrics.png",
+    "sha256": "b9577a22f72e990172909525c8d11369d32ea99c4f33b8ba839a0db7b41b53fc",
+    "attribution": "Model-generated CABOMB project figure by 高书伦; team context retained."
+  }
+]

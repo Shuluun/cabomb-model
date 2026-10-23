@@ -12,6 +12,31 @@ The follow-up work asks two connected questions: how much of a late release
 curve can be predicted from its early measurements, and how the waiting time
 after internalization affects delivery-model outputs.
 
+## Selected figures
+
+### Carrier-delivery process
+
+![CABOMB delivery-process overview](assets/previous_work/delivery_process_overview.png)
+
+An overview from the earlier CABOMB modeling work: circulation, tumor entry,
+OCN retention, YSA-mediated uptake and intracellular release.
+
+### Four carrier designs
+
+![Four-design V1.3 time courses](assets/previous_work/four_design_timecourses.png)
+
+V1.3, 100 nm, sequential targeting. The panels show tumor-associated carrier,
+total internalization, cumulative cargo release and active cargo remaining.
+
+### Size and design comparison
+
+![Design metrics at 100 and 200 nm](assets/previous_work/design_metrics_100_200nm.png)
+
+An earlier comparison of 100 and 200 nm carrier scenarios. Internalization,
+cumulative release and the amount of active cargo at 72 hours are shown separately.
+
+More figures from the follow-up analysis are in the [gallery](docs/results_preview.md).
+
 ## Usage
 
 Use Python 3.10 or later. From this directory:
