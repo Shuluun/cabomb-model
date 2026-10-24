@@ -14,6 +14,15 @@ after internalization affects delivery-model outputs.
 
 ## Selected figures
 
+### Interactive delivery replay
+
+![Animated replay of earlier CABOMB model data](visualizations/organ_replay/time_replay.gif)
+
+Liver carrier, tumor-associated carrier and active intracellular cargo share a
+0–48 h timeline. This GIF previews the earlier V1.2, 100 nm OCN–YSA visualization.
+The [original three-dimensional viewer and source](visualizations/organ_replay/README.md)
+are included; download its HTML to play, seek through time and rotate the views.
+
 ### Carrier-delivery process
 
 ![CABOMB delivery-process overview](assets/previous_work/delivery_process_overview.png)
@@ -85,6 +94,7 @@ For edited parameter files, use the explicit `--registry` option described in
 | `data/processed/` | Model parameter registries, including sources and assumption labels |
 | `tests/` | Model invariants, regression checks and forecasting tests |
 | `app/` | Streamlit interface |
+| `visualizations/organ_replay/` | Earlier offline 3D viewer, animated preview and rebuild sources |
 | `docs/` | Equations, model specification and run instructions |
 | `research/` | Follow-up protocol, literature sources and research findings |
 | `examples/` | Instructions for the executable synthetic example |

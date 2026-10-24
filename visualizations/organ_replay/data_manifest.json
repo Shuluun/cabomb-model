@@ -1,0 +1,79 @@
+{
+  "export_date_client": "2026-10-17",
+  "visual_revision": "v6 unchanged appearance",
+  "run_id": "wiki_20261017_100nm_ocn-ysa_baseline",
+  "scientific_source_version": "supplied CABOMB V1.2 baseline",
+  "source_archive": "许嘉璐wiki(1)(1).zip",
+  "source_archive_sha256": "311d0add6eabf62552a81296003416eaeec9405347e7ee39471633f7c4a7d8c7",
+  "data_kind": "numerical reproduction of attachment baseline, not experimental measurement",
+  "new_ode_runs_per_export": 1,
+  "original_saved_timeseries_supplied": false,
+  "source_files": {
+    "app/organ_viewer/sources/wiki_20261017/Ablation_Study.py": "a33e0ebf3fa2f046c36949eeebacdd357c4f7007bc1840c6a1ea7eccdd850be0",
+    "app/organ_viewer/sources/wiki_20261017/run_manifest.json": "f6e7cf3918a2111717d1379f43e26d882aec4182ab9219d9696b3a8f6457cacf",
+    "app/organ_viewer/sources/wiki_20261017/results.docx": "8e4a224e703fcccbc9dd3d3b331f8a83fe1ad7493e1d22d3d03dd372cc521082",
+    "app/organ_viewer/sources/wiki_20261017/wiki.tex": "f5c1441221ea4e773f628d594c1065f52fda1b0523f6212e1a50d8a5bedfbcfb",
+    "app/organ_viewer/sources/wiki_20261017/effective_config.json": "59dd81ccf76d36b878970e405dba5a340db2d053aa29e20d73a2949f450836a5",
+    "app/organ_viewer/sources/wiki_20261017/reproduced_timeseries.csv": "8a4e693f2d9121ec4e4e68e8cf2cc31b893e4f23f41dce875c801c6ca4e73762",
+    "app/organ_viewer/sources/wiki_20261017/reproduced_metrics.json": "ceec3390abff25c4c2fed6f5aeb48cb463ec984efe13147138ceca4171e44894",
+    "app/organ_viewer/sources/wiki_20261017/imported_parameter_registry.csv": "1833e05b7723427b094583644a4d94b03ffb8b9954cded37d9b3b304d282147d"
+  },
+  "row_count": 400,
+  "time_span_h": [
+    0,
+    48
+  ],
+  "scenario": {
+    "diameter_nm": 100,
+    "design": "OCN+YSA",
+    "N_YSA": 125,
+    "f_valency": 2,
+    "EPR": "medium",
+    "MPS": "linear",
+    "cross_talk": "instant"
+  },
+  "max_source_carrier_residual": 9.992007221626409e-16,
+  "definitions": {
+    "liver": "100*A_liver/D0; liver-associated carrier stock",
+    "tumor": "100*(A_tumor_free+A_ocn_bound+A_ysa_bound+A_internalized)/D0; includes internalized carrier",
+    "cell": "100*A_cargo/(Y_cargo*D0); active released intracellular pool, not cumulative or per-cell"
+  },
+  "display_interpolation": "piecewise linear between 400 reproduced timestamps; no extrapolation",
+  "spatial_encoding": "unchanged v6 regional total wash; no spatial prediction",
+  "amount_encoding": "unchanged cyan shader with fixed per-region ceilings [50,12,10] percent",
+  "display_only_parameters": {
+    "initial_time_h": 24,
+    "color_ceilings_pct": [
+      50,
+      12,
+      10
+    ],
+    "signal_color_srgb": "#43c6d5",
+    "max_signal_blend": 0.72,
+    "original_materials_preserved": true,
+    "original_geometry_preserved": true,
+    "transparent_shell": false,
+    "facing_mask_range": [
+      0.3,
+      1
+    ],
+    "facing_smoothstep_edges": [
+      0.16,
+      0.78
+    ],
+    "wash_luminance_offset": 0.23,
+    "wash_luminance_gain": 0.95,
+    "morphology_seeds": [
+      3717,
+      7113,
+      8417,
+      9187
+    ],
+    "biological_model_inputs": false
+  },
+  "source_limitations": [
+    "200 nm / 500 ligands in narrative is an anchor; actual logged baseline is 100 nm / 125 ligands",
+    "source cargo-loss ledger double-counts internalized degradation; no conserved cargo-ledger claim",
+    "supplied parameter and literature annotations not independently validated"
+  ]
+}

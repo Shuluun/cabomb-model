@@ -1,0 +1,87 @@
+{
+  "type": "unchanged original offline viewer and rebuild sources",
+  "original_date": "2026-10-17",
+  "files": [
+    {
+      "file": "index.html",
+      "original_path": "app/organ_viewer/index.html",
+      "sha256": "76fb21a558d79df81859da8b4368999167b7132f17ee7ffe6ce23a9de6cacdfa"
+    },
+    {
+      "file": "ATTRIBUTION.md",
+      "original_path": "app/organ_viewer/ATTRIBUTION.md",
+      "sha256": "fa741d6a1b5760feca051f47d3d1340881b7137ebba5975f79808033bcdc047b"
+    },
+    {
+      "file": "data_manifest.json",
+      "original_path": "app/organ_viewer/data_manifest.json",
+      "sha256": "dec51465786a521c9ed64275a68cd4e71cd156875fd51553414f3ba1c5cc9141"
+    },
+    {
+      "file": "data.json",
+      "original_path": "app/organ_viewer/data.json",
+      "sha256": "cacdbaa4a5966a0d121d5cad544f95488bdec693360dce9512ad6cd26887f3be"
+    },
+    {
+      "file": "viewer.js",
+      "original_path": "app/organ_viewer/viewer.js",
+      "sha256": "ea3f913de897a3954844c7ffe874ad67442c5b53c3e02eb4a98a9467ccb59179"
+    },
+    {
+      "file": "morphology.js",
+      "original_path": "app/organ_viewer/morphology.js",
+      "sha256": "84c371db64e9e57c424f432d456e6a21441cb07a4b8d486d765e056b8a341a24"
+    },
+    {
+      "file": "amount_signal.js",
+      "original_path": "app/organ_viewer/amount_signal.js",
+      "sha256": "f6b0365ab4cd377511f925b9d4df2d14f8f61c069f62d483296ee04cc22dfaff"
+    },
+    {
+      "file": "style.css",
+      "original_path": "app/organ_viewer/style.css",
+      "sha256": "e8bb9cdab481e228c273ec334a327a6560def922762b77c0959c9b1f1bc77bcb"
+    },
+    {
+      "file": "template.html",
+      "original_path": "app/organ_viewer/template.html",
+      "sha256": "a924c35551dd48b3e84f17f923e8aac94250260db9693ee9824a9643f97da1c8"
+    },
+    {
+      "file": "build.mjs",
+      "original_path": "app/organ_viewer/build.mjs",
+      "sha256": "3880aa30b3dc74d8aef6555c723ac5e126ea686a465a6412a299775f9411bf70"
+    },
+    {
+      "file": "package.json",
+      "original_path": "app/organ_viewer/package.json",
+      "sha256": "10abdb0936bc737c87636f94d8cefee5b58ecf26f30db2af8bbf6c52f2165efe"
+    },
+    {
+      "file": "package-lock.json",
+      "original_path": "app/organ_viewer/package-lock.json",
+      "sha256": "f4d96a65a236aa1bc0c8f30eb434b938a8a597e148e4eeed5f2871c487d4caa4"
+    },
+    {
+      "file": "assets/THREE-LICENSE.txt",
+      "original_path": "app/organ_viewer/assets/THREE-LICENSE.txt",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "file": "assets/VH_M_Liver.glb",
+      "original_path": "app/organ_viewer/assets/VH_M_Liver.glb",
+      "sha256": "e94f18646d1b8f72cc45b92bdd67bbb4eb71d5bf954888bc8b8f8b52b3940b6a"
+    },
+    {
+      "file": "preview.png",
+      "original_path": "app/organ_viewer/preview-data-20261017.png",
+      "sha256": "e1e2dfa52b0d9da20337a3bff820bca884d14b860d5933d7bdf5ff981d021993"
+    },
+    {
+      "file": "historical_browser_validation_20261017.json",
+      "original_path": "app/organ_viewer/package_browser_validation_20261017.json",
+      "sha256": "18e742b09a65b2bbf8ffb62be9cba3352cbb11be324f058c03863f9d2a1318c3"
+    }
+  ],
+  "packaging_note": "Original HTML, sources, data, geometry, screenshot and historical QA retained unchanged. GIF and GIF renderer added for GitHub presentation."
+}

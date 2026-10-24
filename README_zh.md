@@ -4,6 +4,12 @@
 
 原模型用常微分方程描述 CaCO₃ 载体从血液循环到肿瘤入胞、降解和释放的过程，比较未修饰、OCN、YSA 和双修饰四种设计。后续分析研究早期释放曲线能否预测后期，以及入胞后的等待时间怎样影响累计响应。
 
+## 交互可视化
+
+![原交互展示数据的曲线回放](visualizations/organ_replay/time_replay.gif)
+
+[三维时间回放及源码](visualizations/organ_replay/README.md)保留了之前做的肝脏、肿瘤组织和细胞内释放展示。下载其中的 `index.html` 后，用浏览器打开即可播放、拖动时间和旋转模型。这一页使用原来的 V1.2、100 nm OCN–YSA 情景；GIF 是本次用原展示的保存数据导出的预览。肝脏参考网格来自 HuBMAP，素材署名和许可证一并保留。
+
 ## Usage
 
 在本目录打开 PowerShell，使用 Python 3.10 或更新版本：

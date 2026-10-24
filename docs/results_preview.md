@@ -1,5 +1,14 @@
 # Result preview
 
+## Earlier interactive visualization
+
+![Animated preview of the original viewer data](../visualizations/organ_replay/time_replay.gif)
+
+The original liver, tumor-tissue and intracellular viewer is included with its
+source and asset credits. Its saved V1.2 100 nm baseline is replayed here as a
+GIF; [open/download instructions](../visualizations/organ_replay/README.md) cover
+the interactive 3D version.
+
 ## Earlier CABOMB figures
 
 These original figures are retained from the author's earlier modeling work.

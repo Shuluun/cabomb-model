@@ -2,6 +2,14 @@
 
 | File | Role |
 | --- | --- |
+| `scripts/render_replay_preview.py` | Export an animated curve preview from the earlier viewer's saved data. |
+| `visualizations/organ_replay/index.html` | Original self-contained 3D time-replay page. |
+| `visualizations/organ_replay/viewer.js` | Shared timeline, plots, scene setup and playback controls. |
+| `visualizations/organ_replay/morphology.js` | Procedural tumor-tissue and cell illustrations. |
+| `visualizations/organ_replay/amount_signal.js` | Shader overlay mapping regional amounts to display color. |
+| `visualizations/organ_replay/style.css` | Viewer layout and visual styling. |
+| `visualizations/organ_replay/template.html` | Page structure and build placeholders. |
+| `visualizations/organ_replay/build.mjs` | Bundle local code, data and liver geometry into offline HTML. |
 | `scripts/check_solver_agreement.py` | Compare the frozen trajectory, default LSODA and tighter LSODA/Radau solutions. |
 | `tests/test_v13_solver_convergence.py` | Check numerical convergence against independent tight solvers. |
 | `src/cabomb_model/__init__.py` | CABOMB first-version PBPK-inspired ODE model. |

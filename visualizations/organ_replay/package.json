@@ -1,0 +1,10 @@
+{
+  "name": "cabomb-organ-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local, offline CABOMB organ time-course visualization",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": { "three": "0.186.1" },
+  "devDependencies": { "esbuild": "0.28.2" }
+}

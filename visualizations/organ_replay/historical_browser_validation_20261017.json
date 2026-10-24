@@ -1,0 +1,48 @@
+{
+  "at48": {
+    "amounts": [
+      4.890649030013181,
+      0.6514371833236781,
+      7.342744177750207
+    ],
+    "canvases": 3,
+    "overflow": false,
+    "time": "48.0",
+    "views": [
+      {
+        "amountRatio": "0.09781298060026362",
+        "baseColor": "96564a",
+        "maxSignalBlend": "0.0704253460321898",
+        "originalGeometry": "true",
+        "ready": "true",
+        "signalMaterials": "26",
+        "signalRatio": "0.09781298060026362",
+        "surfaceOpacity": "1",
+        "surfacesOpaque": "true"
+      },
+      {
+        "amountRatio": "0.054286431943639836",
+        "baseColor": "a68c83",
+        "maxSignalBlend": "0.03908623099942068",
+        "originalGeometry": "true",
+        "ready": "true",
+        "signalMaterials": "2",
+        "signalRatio": "0.054286431943639836",
+        "surfaceOpacity": "1",
+        "surfacesOpaque": "true"
+      },
+      {
+        "amountRatio": "0.7342744177750207",
+        "baseColor": "929c94",
+        "maxSignalBlend": "0.5286775807980149",
+        "originalGeometry": "true",
+        "ready": "true",
+        "signalMaterials": "2",
+        "signalRatio": "0.7342744177750207",
+        "surfaceOpacity": "1",
+        "surfacesOpaque": "true"
+      }
+    ]
+  },
+  "logs": []
+}

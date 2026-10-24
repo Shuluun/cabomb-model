@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <meta name="description" content="CABOMB：肝脏、肿瘤组织与肿瘤细胞内药物递送的时间回放。">
+  <title>CABOMB · 递送时间回放</title>
+  <style>/*__CABOMB_STYLE__*/</style>
+</head>
+<body>
+<div class="ready" id="load-progress" aria-hidden="true"></div>
+<main>
+  <header class="top">
+    <div><div class="brand">CABOMB</div><h1>载体与药物 · 时间回放</h1><p class="intro">拖动时间，用柔和叠色观察含量变化</p></div>
+    <div class="scenario">100 nm · OCN–YSA · 模型情景</div>
+  </header>
+  <section class="controls" aria-label="时间回放控制">
+    <button class="play" id="play" type="button" aria-label="播放时间回放"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l10 6-10 6z"/></svg><span>播放</span></button>
+    <div class="time"><output id="time-value" for="timeline">24.0</output><small>h</small></div>
+    <div class="timeline"><label class="sr-only" for="timeline">时间（小时）</label><input id="timeline" type="range" min="0" max="48" step="0.01" value="24" aria-valuetext="24小时"><div class="ticks"><button type="button" data-time="0">0 h</button><button type="button" data-time="16">16 h</button><button type="button" data-time="32">32 h</button><button type="button" data-time="48">48 h</button></div></div>
+    <span class="color-key"><span>叠色 · 少</span><i aria-hidden="true"></i><span>多</span></span>
+  </section>
+  <section class="cards" aria-label="三个递送位置的含量与三维视图">
+    <article class="organ-card" data-panel="0">
+      <div class="card-head"><h2>肝脏</h2><span class="kind">解剖参考模型</span></div>
+      <div class="amount-line"><span class="amount" id="amount-0">—</span><span class="unit">% 初始载体量</span></div>
+      <div class="quantity-label">肝组织关联载体</div>
+      <div class="viewport" id="view-0" role="img" aria-label="肝脏参考模型，青蓝色叠色表示总体含量"><div class="model-note">叠色量程 0–50% · 拖动旋转</div></div>
+      <div class="chart-wrap"><div class="chart-head"><span>载体量（%）</span><span>时间（h）</span></div><svg class="chart" id="chart-0" role="img" aria-label="肝关联载体量随时间的曲线"></svg></div>
+    </article>
+    <article class="organ-card" data-panel="1">
+      <div class="card-head"><h2>肿瘤组织</h2><span class="kind">组织形态示意</span></div>
+      <div class="amount-line"><span class="amount" id="amount-1">—</span><span class="unit">% 初始载体量</span></div>
+      <div class="quantity-label">组织内总载体 · 含已内吞载体</div>
+      <div class="viewport" id="view-1" role="img" aria-label="肿瘤组织原始形态示意，青蓝色叠色表示总体含量"><div class="model-note">叠色量程 0–12% · 拖动旋转</div></div>
+      <div class="chart-wrap"><div class="chart-head"><span>载体量（%）</span><span>时间（h）</span></div><svg class="chart" id="chart-1" role="img" aria-label="肿瘤组织载体量随时间的曲线"></svg></div>
+    </article>
+    <article class="organ-card" data-panel="2">
+      <div class="card-head"><h2>肿瘤细胞内</h2><span class="kind">细胞剖面示意</span></div>
+      <div class="amount-line"><span class="amount" id="amount-2">—</span><span class="unit">% 初始载药量</span></div>
+      <div class="quantity-label">已释放、仍活性的药物（cargo）</div>
+      <div class="viewport" id="view-2" role="img" aria-label="肿瘤细胞形态示意，细胞质上的青蓝色叠色表示活性药物总体含量"><div class="model-note">细胞质叠色 0–10% · 细胞群整体量</div></div>
+      <div class="chart-wrap"><div class="chart-head"><span>活性药物量（%）</span><span>时间（h）</span></div><svg class="chart" id="chart-2" role="img" aria-label="肿瘤细胞内活性药物量随时间的曲线"></svg></div>
+    </article>
+  </section>
+
+  <footer class="caption">
+    <p>青蓝色叠色越明显，表示总体含量越高；原有结构和纹理保留，三处量程不同。<br>叠色为区域总量示意，非实测染色或药物空间分布；数据来自探索性模型。</p>
+    <details><summary>数据口径与模型来源</summary><div class="details-body">
+      数据：所提供 Wiki 压缩包中的 CABOMB V1.2 基准情景；100 nm、OCN–YSA、125 条可及YSA、medium EPR、线性MPS、instant交叉转移。按附件原代码与参数重现 0–48 h 结果（400 个时间点），非实测数据。<br>
+      肝脏：A_liver/D0；肿瘤：游离、OCN结合、YSA结合与已内吞载体之和/D0；细胞内：活性释放cargo/(Y×D0)。三幅图不是互斥剂量分配，不应相加。细胞图表示模型中的细胞群整体量，细胞质仅为着色载面，不代表已知的亚细胞药物定位。<br>
+      肝脏网格：<a href="https://github.com/hubmapconsortium/ccf-releases/blob/main/v1.2/models/VH_M_Liver.glb" target="_blank" rel="noopener">HuBMAP / Human Reference Atlas</a>，CC BY 4.0，Visible Human 男性参考；显示材质和视角经调整。肿瘤组织与细胞为原创形态示意，非样本重建。<br>
+      曲线连接和时间拖动使用保存时间点间的线性插值。叠色量程固定为0–50%、0–12%、0–10%，分别与本区域曲线纵轴一致。保留剖面实验前的完整几何、材质颜色和纹理，青蓝色仅为总量显示层。叠色受表面明暗和视角影响，不是定量染色、内部断层或局部浓度图；不生成热点、粒子轨迹或细胞核摄取的推断。
+    </div></details>
+  </footer>
+</main>
+<script>/*__CABOMB_DATA__*/</script>
+<script>/*__CABOMB_SCRIPT__*/</script>
+</body>
+</html>

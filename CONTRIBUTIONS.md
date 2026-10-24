@@ -6,6 +6,11 @@ are presented as the author's work, following the author's contribution record.
 The original model, its extensions, analysis utilities and publication preparation
 are included here as one personal software project.
 
+The earlier interactive delivery viewer is also retained, including its
+procedural tissue/cell illustrations and shared-timeline display code. Its
+liver reference geometry comes from HuBMAP / Human Reference Atlas and is
+credited separately in `visualizations/organ_replay/ATTRIBUTION.md`.
+
 The scientific motivation comes from **CABOMB, BNU-China 2026 iGEM**. The team context
 and carrier-design concept are acknowledged; this repository does not claim
 authorship of the team's entire wet-lab, design or Wiki work.
